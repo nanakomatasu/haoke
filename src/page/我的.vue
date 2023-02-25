@@ -1,38 +1,38 @@
 <template>
     <div>
-
+我的
     </div>
 </template>
 
 <script>
 export default {
-  name:'MyCenter',
-    props: {
+  name: 'MyCenter',
+  props: {
 
-    },
-    data() {
-        return {
+  },
+  data () {
+    return {
 
-        };
-    },
-    computed: {
+    };
+  },
+  computed: {
 
-    },
-    created() {
+  },
+  created () {
 
-    },
-    mounted() {
+  },
+  mounted () {
 
-    },
-    watch: {
+  },
+  watch: {
 
-    },
-    methods: {
+  },
+  methods: {
 
-    },
-    components: {
+  },
+  components: {
 
-    },
+  },
 };
 </script>
 

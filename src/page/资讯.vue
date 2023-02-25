@@ -1,38 +1,38 @@
 <template>
     <div>
-
+      资讯
     </div>
 </template>
 
 <script>
 export default {
-  name:'MyNews',
-    props: {
+  name: 'MyNews',
+  props: {
 
-    },
-    data() {
-        return {
+  },
+  data () {
+    return {
 
-        };
-    },
-    computed: {
+    };
+  },
+  computed: {
 
-    },
-    created() {
+  },
+  created () {
 
-    },
-    mounted() {
+  },
+  mounted () {
 
-    },
-    watch: {
+  },
+  watch: {
 
-    },
-    methods: {
+  },
+  methods: {
 
-    },
-    components: {
+  },
+  components: {
 
-    },
+  },
 };
 </script>
 

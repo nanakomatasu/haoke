@@ -1,41 +1,64 @@
 <template>
     <div>
+        <router-view></router-view>
+        <van-tabbar v-model="active">
+  <van-tabbar-item icon="home-o" @click="tosy">首页</van-tabbar-item>
+  <van-tabbar-item icon="search"  @click="tozf">找房</van-tabbar-item>
+  <van-tabbar-item icon="friends-o"  @click="tozx">资讯</van-tabbar-item>
+  <van-tabbar-item icon="setting-o"  @click="towd">我的</van-tabbar-item>
+</van-tabbar>
 
     </div>
 </template>
 
 <script>
 export default {
-  name:'MyHome',
-    props: {
+  name: 'MyHome',
+  props: {
 
-    },
-    data() {
-        return {
+  },
+  data () {
+    return {
+    };
+  },
+  computed: {
 
-        };
-    },
-    computed: {
+  },
+  created () {
 
-    },
-    created() {
+  },
+  mounted () {
 
-    },
-    mounted() {
+  },
+  watch: {
 
+  },
+  methods: {
+    tosy () {
+      this.$router.push('main')
     },
-    watch: {
+    tozf () {
+      this.$router.push('found')
+    },
+    towd () {
+      this.$router.push('center')
+    },
+    tozx () {
+      this.$router.push('news')
+    }
 
-    },
-    methods: {
+  },
+  components: {
 
-    },
-    components: {
-
-    },
+  },
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
+.van-tabber{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
 
 </style>

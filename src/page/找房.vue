@@ -1,38 +1,38 @@
 <template>
     <div>
-
+    找房
     </div>
 </template>
 
 <script>
 export default {
-  name:"MyFound",
-    props: {
+  name: "MyFound",
+  props: {
 
-    },
-    data() {
-        return {
+  },
+  data () {
+    return {
 
-        };
-    },
-    computed: {
+    };
+  },
+  computed: {
 
-    },
-    created() {
+  },
+  created () {
 
-    },
-    mounted() {
+  },
+  mounted () {
 
-    },
-    watch: {
+  },
+  watch: {
 
-    },
-    methods: {
+  },
+  methods: {
 
-    },
-    components: {
+  },
+  components: {
 
-    },
+  },
 };
 </script>
 
