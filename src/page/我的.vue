@@ -67,10 +67,11 @@ export default {
        top: 30%;
        left: 50%;
        transform: translateX(-50%);
-      width: 80%;
-      height: 30%;
+      width: 300px;
+      height: 200px;
       background-color: #fff;
       box-shadow:0px 0px 6px #00000030;
+      z-index: 9999;
 
       .avatar{
         position: absolute;
