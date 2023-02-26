@@ -1,6 +1,7 @@
 <template>
     <div>
-      <div class="title">登录</div>
+
+      <div class="title"> <span> <van-icon name="arrow-left" /></span>登录</div>
       <van-form @submit="onSubmit">
   <van-cell-group inset>
     <van-field
@@ -69,7 +70,9 @@ export default {
       } catch (err) {
         alert('登录失败')
       }
-    }
+    },
+    toback () { this.$router.back() }
+
   },
   components: {
 
@@ -85,5 +88,11 @@ export default {
     line-height: 40px;
     color: #fff;
     font-size: 16px;
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
   }
 </style>

@@ -7,6 +7,7 @@ import MyMain from "../page/首页.vue";
 import MyHome from "../components/home.vue";
 import UserLogin from "../components/UserLogin.vue";
 import MyCity from "../components/mycity.vue";
+import MyFa from "../components/MyFavorite.vue";
 
 Vue.use(VueRouter);
 
@@ -32,6 +33,10 @@ const routes = [
   {
     path: "/city",
     component: MyCity,
+  },
+  {
+    path: "/fav",
+    component: MyFa,
   },
 ];
 

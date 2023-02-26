@@ -1,7 +1,7 @@
 <template>
     <div>
-      <div>
-        <img src="http://liufusong.top:8080/img/profile/bg.png" alt="" >
+      <div  class="main">
+        <img src="http://liufusong.top:8080/img/profile/bg.png" alt="">
 <div class="userinfo">
 
   <div class="avatar">
@@ -48,6 +48,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-
+<style scoped lang="less">
+.userinfo {
+  top: 90px;
+}
 </style>
