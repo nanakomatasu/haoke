@@ -1,7 +1,7 @@
 <template>
     <div>
 
-      <div class="title"> <span> <van-icon name="arrow-left" /></span>登录</div>
+      <div class="title" > <span> <van-icon name="arrow-left" @click="toback"/></span>登录</div>
       <van-form @submit="onSubmit">
   <van-cell-group inset>
     <van-field
@@ -71,7 +71,7 @@ export default {
         alert('登录失败')
       }
     },
-    toback () { this.$router.back() }
+    toback () { this.$router.back() },
 
   },
   components: {

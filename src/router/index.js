@@ -8,13 +8,14 @@ import MyHome from "../components/home.vue";
 import UserLogin from "../components/UserLogin.vue";
 import MyCity from "../components/mycity.vue";
 import MyFa from "../components/MyFavorite.vue";
+import MyRent from "../components/myrent.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    redirect: "/login",
+    redirect: "/home/main",
   },
   {
     path: "/home",
@@ -37,6 +38,10 @@ const routes = [
   {
     path: "/fav",
     component: MyFa,
+  },
+  {
+    path: "/rent",
+    component: MyRent,
   },
 ];
 

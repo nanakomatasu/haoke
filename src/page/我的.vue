@@ -3,7 +3,12 @@
      <component :is="curritem"></component>
  <div class="footericon">
   <van-grid :column-num="3">
-  <van-grid-item v-for="(item,index) in list" :key="index" :icon="item.icon" :text="item.text" @click="tofav"/>
+  <van-grid-item icon="star-o" text="我的收藏" @click="tofav" />
+  <van-grid-item icon="wap-home-o" text="我的出租" @click="torent"/>
+  <van-grid-item icon="upgrade" text="看房记录" />
+  <van-grid-item icon="ecard-pay" text="成为房主" />
+  <van-grid-item icon="contact" text="个人资料" />
+  <van-grid-item icon="bullhorn-o" text="联系我们" />
 </van-grid></div>
    <img src="http://liufusong.top:8080/img/profile/join.png" alt="">
     </div>
@@ -53,6 +58,9 @@ export default {
     },
     tofav () {
       this.$router.push('/fav')
+    },
+    torent () {
+      this.$router.push('/rent')
     }
   },
   components: {
@@ -101,5 +109,9 @@ export default {
   }
   .footericon {
     margin-top: 100px;
+  }
+  .van-grid-item__content {
+    display: flex;
+    flex-direction: row;
   }
 </style>
