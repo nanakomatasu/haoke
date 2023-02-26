@@ -1,16 +1,6 @@
 <template>
     <div>
-      <div>
-        <img src="http://liufusong.top:8080/img/avatar.png
-" alt="" >
-<div class="userinfo">
-
-  <div class="avatar">
-    <img src="http://liufusong.top:8080/img/profile/avatar.png" alt="">
-  </div>
-  <van-button type="success">退出</van-button>
-</div>
-      </div>
+     <component :is="curritem"></component>
  <div class="footericon">
   <van-grid :column-num="3">
   <van-grid-item v-for="(item,index) in list" :key="index" :icon="item.icon" :text="item.text" />
@@ -20,6 +10,8 @@
 </template>
 
 <script>
+import SuLo from '../dynamic/seccesslogin.vue'
+import NoLo from '../dynamic/nonelogin.vue'
 export default {
   name: 'MyCenter',
   props: {
@@ -34,14 +26,15 @@ export default {
         { icon: 'ecard-pay', text: '成为房主' },
         { icon: 'contact', text: '个人资料' },
         { icon: 'bullhorn-o', text: '联系我们' },
-      ]
+      ],
+      curritem: 'SuLo'
     };
   },
   computed: {
 
   },
   created () {
-
+    this.$nextTick(this.changecom)
   },
   mounted () {
 
@@ -50,10 +43,17 @@ export default {
 
   },
   methods: {
-
+    changecom () {
+      if (localStorage.getItem('token')) {
+        this.curritem = 'SuLo'
+      } else {
+        this.$toast('未登录')
+        this.curritem = 'NoLo'
+      }
+    }
   },
   components: {
-
+    SuLo, NoLo
   },
 };
 </script>
@@ -85,9 +85,10 @@ export default {
       }
 
       .van-button {
-        width: 60px;
+        width: 80px;
         height: 30px;
         border: none;
+        font-size: 16px;
         background-color: #07c160;
         color: #fff;
         position: absolute;

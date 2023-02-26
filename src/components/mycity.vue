@@ -68,6 +68,7 @@ export default {
     text-align: center;
     line-height: 40px;
     color: #fff;
+    font-size: 16px;
   }
 
   .van-icon-arrow-left {
