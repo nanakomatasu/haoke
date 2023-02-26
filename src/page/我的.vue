@@ -3,7 +3,7 @@
      <component :is="curritem"></component>
  <div class="footericon">
   <van-grid :column-num="3">
-  <van-grid-item v-for="(item,index) in list" :key="index" :icon="item.icon" :text="item.text" />
+  <van-grid-item v-for="(item,index) in list" :key="index" :icon="item.icon" :text="item.text" @click="tofav"/>
 </van-grid></div>
    <img src="http://liufusong.top:8080/img/profile/join.png" alt="">
     </div>
@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       list: [
-        { icon: 'star-o', text: '我的收藏' },
+        { icon: 'star-o', text: '我的收藏', click: 'tofav' },
         { icon: 'wap-home-o', text: '我的出租' },
         { icon: 'upgrade', text: '看房记录' },
         { icon: 'ecard-pay', text: '成为房主' },
@@ -50,6 +50,9 @@ export default {
         this.$toast('未登录')
         this.curritem = 'NoLo'
       }
+    },
+    tofav () {
+      this.$router.push('/fav')
     }
   },
   components: {

@@ -1,7 +1,7 @@
 <template>
     <div>
   <div class="title" >
-    <span><van-icon name="arrow-left" /></span>我的收藏
+    <span><van-icon name="arrow-left" @click="toback"/></span>我的收藏
   </div>
   <div>
     <div class="main" v-for="v in favoritelist" :key="v.houseCode">
@@ -54,7 +54,8 @@ export default {
       })
       this.favoritelist = res.data.body
       console.log(this.favoritelist);
-    }
+    },
+    toback () { this.$router.back() }
   },
   components: {
 
@@ -84,7 +85,6 @@ export default {
     height: 100px;
     border-bottom: 1px solid #ccc;
     .pic {
-      float: left;
       width: 80px;
       height: 80px;
       margin-top: 10px;
@@ -94,7 +94,6 @@ export default {
       }
     }
     .right {
-      float: left;
       margin-top: 15px;
       margin-left: 20px;
       text-align: left;

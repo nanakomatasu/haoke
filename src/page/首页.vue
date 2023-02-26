@@ -133,4 +133,8 @@ export default {
   margin-top: 15%;
 }
 
+.van-grid-item__content {
+  font-size: 14px;
+}
+
 </style>
