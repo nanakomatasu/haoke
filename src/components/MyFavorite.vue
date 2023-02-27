@@ -4,7 +4,7 @@
     <span><van-icon name="arrow-left" @click="toback"/></span>我的收藏
   </div>
   <div>
-    <div class="main" v-for="v in favoritelist" :key="v.houseCode">
+    <div class="main" v-for="v in favoritelist" :key="v.houseCode" @click="todetials(v.houseCode)">
       <div class="pic">
         <img :src="'http://liufusong.top:8080'+v.houseImg" alt="">
       </div>
@@ -55,7 +55,15 @@ export default {
       this.favoritelist = res.data.body
       console.log(this.favoritelist);
     },
-    toback () { this.$router.back() }
+    toback () { this.$router.back() },
+    todetials (id) {
+      this.$router.push({
+        path: '/favdetails',
+        query: {
+          id: id
+        }
+      })
+    }
   },
   components: {
 

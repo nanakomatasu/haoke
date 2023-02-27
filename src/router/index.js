@@ -9,6 +9,8 @@ import UserLogin from "../components/UserLogin.vue";
 import MyCity from "../components/mycity.vue";
 import MyFa from "../components/MyFavorite.vue";
 import MyRent from "../components/myrent.vue";
+import detailsFav from "../components/DetailsFav.vue";
+import DetailsRent from "../components/DetailsRent.vue";
 
 Vue.use(VueRouter);
 
@@ -42,6 +44,14 @@ const routes = [
   {
     path: "/rent",
     component: MyRent,
+  },
+  {
+    path: "/favdetails",
+    component: detailsFav,
+  },
+  {
+    path: "/rentdetails",
+    component: DetailsRent,
   },
 ];
 

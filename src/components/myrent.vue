@@ -4,7 +4,7 @@
     <span><van-icon name="arrow-left" @click="toback"/></span>出租列表
   </div>
   <div>
-    <div class="main" v-for="v in rentlist" :key="v.houseCode">
+    <div class="main" v-for="v in rentlist" :key="v.houseCode" @click="todetials (v.houseCode)">
       <div class="pic">
         <img :src="'http://liufusong.top:8080'+v.houseImg" alt="">
       </div>
@@ -55,7 +55,16 @@ export default {
       this.rentlist = res.data.body
       console.log(this.rentlist);
     },
-    toback () { this.$router.back() }
+    toback () { this.$router.back() },
+
+    todetials (id) {
+      this.$router.push({
+        path: '/rentdetails',
+        query: {
+          id: id
+        }
+      })
+    }
 
   },
   components: {
