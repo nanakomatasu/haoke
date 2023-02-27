@@ -41,7 +41,9 @@
     </div>
     <div class="map">
         <p>小区:<span>{{ obj.community }}</span></p>
-        <div class="baidu"></div>
+        <div class="baidu">
+
+        </div>
       </div>
       <div class="details">
           <div class="about">

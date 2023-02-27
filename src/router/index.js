@@ -11,6 +11,7 @@ import MyFa from "../components/MyFavorite.vue";
 import MyRent from "../components/myrent.vue";
 import detailsFav from "../components/DetailsFav.vue";
 import DetailsRent from "../components/DetailsRent.vue";
+import MyMap from "../components/mymap.vue";
 
 Vue.use(VueRouter);
 
@@ -52,6 +53,10 @@ const routes = [
   {
     path: "/rentdetails",
     component: DetailsRent,
+  },
+  {
+    path: "/map",
+    component: MyMap,
   },
 ];
 
