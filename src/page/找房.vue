@@ -96,7 +96,7 @@ export default {
       const res = await request({
         method: 'get',
         url: '/houses',
-        data: {
+        params: {
           cityId: this.$route.query.id ? this.$route.query.id : 'AREA%7Ce4940177-c04c-383d&stat=1&end=20'
 
         }

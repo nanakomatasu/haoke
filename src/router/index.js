@@ -13,6 +13,7 @@ const detailsFav = () => import("../components/DetailsFav.vue");
 const DetailsRent = () => import("../components/DetailsRent.vue");
 const MyMap = () => import("../components/mymap.vue");
 const HotCity = () => import("../components/hotcity.vue");
+const RentForm = () => import("../components/renform.vue");
 Vue.use(VueRouter);
 
 const routes = [
@@ -61,6 +62,10 @@ const routes = [
   {
     path: "/hotcity",
     component: HotCity,
+  },
+  {
+    path: "/rentform",
+    component: RentForm,
   },
 ];
 
