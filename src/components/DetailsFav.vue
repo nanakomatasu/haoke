@@ -39,9 +39,10 @@
         </div>
 
       </div>
-      <div class="map">
+      <div class="baidumap">
           <p>小区:<span>{{ obj.community }}</span></p>
-          <div class="baidu"></div>
+          <baidu-map class="map" :center="{lng: obj.coord.longitude, lat: obj.coord.latitude}" :zoom="15">
+  </baidu-map>
         </div>
         <div class="details">
             <div class="about">
@@ -96,7 +97,7 @@ export default {
   },
   data () {
     return {
-      obj: {}
+      obj: {},
     };
   },
   computed: {
@@ -122,7 +123,9 @@ export default {
       })
       console.log(res.data.body);
       this.obj = res.data.body
-    },
+      // this.lng = this.obj.coord.longitude,
+      // this.lat = this.obj.coord.latitude,
+    }
   },
   components: {
 
@@ -214,7 +217,7 @@ export default {
     }
   }
 
-  .map {
+  .baidumap {
     margin-top: 30px;
     font-size: 14px;
     p {
@@ -318,5 +321,10 @@ export default {
             }
      }
   }
+
+    .map {
+  width: 100%;
+  height: 100px;
+}
 
 </style>

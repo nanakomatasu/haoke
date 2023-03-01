@@ -19,7 +19,7 @@
 <van-row gutter="40">
   <van-col span="6"  ><van-icon name="wap-home-o" size="30" color="#00ae66"/>整租</van-col>
   <van-col span="6"><van-icon name="friends-o" size="30" color="#00ae66"/>合租</van-col>
-  <van-col span="6"><van-icon name="location-o" size="30" color="#00ae66"/>地图找房</van-col>
+  <van-col span="6" @click="tomap"><van-icon name="location-o" size="30" color="#00ae66" />地图找房</van-col>
   <van-col span="6"><van-icon name="wap-home-o" size="30" color="#00ae66"/>去出租</van-col>
 </van-row>
 <van-nav-bar
@@ -90,6 +90,9 @@ export default {
       })
       console.log(res.data.body);
       this.group = res.data.body
+    },
+    tomap () {
+      this.$router.push('/map')
     }
   },
   components: {
