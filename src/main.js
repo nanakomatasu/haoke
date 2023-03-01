@@ -9,7 +9,7 @@ import BaiduMap from "vue-baidu-map"; // 导入地图
 
 // 进行全局注册，一次性引入百度地图组件库的所有组件
 // ak为官方提供的密钥
-Vue.use(BaiduMap, {
+Vue.use(BaiduMap, {git 
   ak: "MznXZvfNxuMelxcRzTlAsq3wqF0SzMep",
 });
 
