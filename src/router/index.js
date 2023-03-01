@@ -1,17 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import MyFound from "../page/找房.vue";
-import MyCenter from "../page/我的.vue";
-import MyNews from "../page/资讯.vue";
-import MyMain from "../page/首页.vue";
-import MyHome from "../components/home.vue";
-import UserLogin from "../components/UserLogin.vue";
-import MyCity from "../components/mycity.vue";
-import MyFa from "../components/MyFavorite.vue";
 import MyRent from "../components/myrent.vue";
 import detailsFav from "../components/DetailsFav.vue";
 import DetailsRent from "../components/DetailsRent.vue";
 import MyMap from "../components/mymap.vue";
+const MyFound = () => import("../page/找房.vue");
+const MyCenter = () => import("../page/我的.vue");
+const MyNews = () => import("../page/资讯.vue");
+const MyMain = () => import("../page/首页.vue");
+const MyHome = () => import("../components/home.vue");
+const UserLogin = () => import("../components/UserLogin.vue");
+const MyCity = () => import("../components/mycity.vue");
+const MyFa = () => import("../components/MyFavorite.vue");
 
 Vue.use(VueRouter);
 
@@ -61,7 +61,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   routes,
 });
 
