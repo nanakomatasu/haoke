@@ -3,7 +3,7 @@
 <van-index-bar   :sticky="true" >
         <van-index-anchor    v-for="(item,index) in firstName" :key="index" :index="index">
           <span>{{index}}</span>
-          <van-cell  v-for="(citem,cindex) in item" :key="cindex"  :title="citem"/>
+          <van-cell  v-for="(citem,cindex) in item" :key="cindex"  :title="citem" @click='tohomename(citem)'/>
         </van-index-anchor>
  </van-index-bar>
 </template>
@@ -63,10 +63,14 @@ export default {
       this.$forceUpdate()
       console.log(this.firstName);
     },
-    tohome () {
-      this.$router.push('/home/main')
-    },
-
+    tohomename (index) {
+      this.$router.push({
+        path: '/home/main',
+        query: {
+          id: index,
+        }
+      })
+    }
   },
   components: {
 

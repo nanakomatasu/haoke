@@ -1,9 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import MyRent from "../components/myrent.vue";
-import detailsFav from "../components/DetailsFav.vue";
-import DetailsRent from "../components/DetailsRent.vue";
-import MyMap from "../components/mymap.vue";
 const MyFound = () => import("../page/找房.vue");
 const MyCenter = () => import("../page/我的.vue");
 const MyNews = () => import("../page/资讯.vue");
@@ -12,7 +8,11 @@ const MyHome = () => import("../components/home.vue");
 const UserLogin = () => import("../components/UserLogin.vue");
 const MyCity = () => import("../components/mycity.vue");
 const MyFa = () => import("../components/MyFavorite.vue");
-
+const MyRent = () => import("../components/myrent.vue");
+const detailsFav = () => import("../components/DetailsFav.vue");
+const DetailsRent = () => import("../components/DetailsRent.vue");
+const MyMap = () => import("../components/mymap.vue");
+const HotCity = () => import("../components/hotcity.vue");
 Vue.use(VueRouter);
 
 const routes = [
@@ -57,6 +57,10 @@ const routes = [
   {
     path: "/map",
     component: MyMap,
+  },
+  {
+    path: "/hotcity",
+    component: HotCity,
   },
 ];
 

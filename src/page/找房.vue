@@ -1,9 +1,9 @@
 <template>
     <div>
       <div class="title">
-        <p>上海</p>
+        <p @click="tohotlist()">{{ name}}</p>
       <input type="text" placeholder="快来选你心仪的房子吧">
-      <van-icon name="location-o" />
+      <van-icon name="location-o" @click="tomap()"/>
     </div>
     <van-dropdown-menu>
   <van-dropdown-item v-model="value1" :options="option1" >
@@ -67,7 +67,8 @@ export default {
   data () {
     return {
       areaList,
-      foundlist: []
+      foundlist: [],
+      name: this.$route.query.name ? this.$route.query.name : '上海'
     };
   },
   computed: {
@@ -96,12 +97,18 @@ export default {
         method: 'get',
         url: '/houses',
         data: {
-          cityId:
-          'AREA%7Ce4940177-c04c-383d&stat=1&end=20'
+          cityId: this.$route.query.id ? this.$route.query.id : 'AREA%7Ce4940177-c04c-383d&stat=1&end=20'
+
         }
       })
       console.log(res.data.body.list);
       this.foundlist = res.data.body.list
+    },
+    tohotlist () {
+      this.$router.push('/hotcity')
+    },
+    tomap () {
+      this.$router.push('/map')
     }
   },
   components: {

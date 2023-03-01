@@ -3,7 +3,7 @@
         <van-search
   v-model="value"
   show-action
-  label="上海"
+  :label=this.$route.query.id
   placeholder="请输入搜索关键词"
   @click="tocity"
 >
@@ -53,7 +53,6 @@ export default {
     };
   },
   computed: {
-
   },
   created () {
     this.$nextTick(this.getpic)
